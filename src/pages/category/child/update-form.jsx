@@ -35,7 +35,7 @@ export default class UpdateForm extends PureComponent{
     }
     render() {
         console.log('caategroy - update form')
-
+        console.log(this.props)
         const category = this.props.category
         const { visible, confirmLoading } = category
         return(
@@ -49,7 +49,6 @@ export default class UpdateForm extends PureComponent{
                     onCancel={this.handleCancel}
                     cancelText='取消'
                     okText='确认'
-                    afterClose={()=>console.log('afterClose')}
                 >
                     <Form
                         ref={this.formRef}

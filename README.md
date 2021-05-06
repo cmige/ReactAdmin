@@ -26,6 +26,7 @@
    * 用户模块的 **添加、删除 和 修改用户** 的功能；
    * 权限模块的 权限角色的创建 和 权限的 **添加、修改** 功能；
    * 图表模块的 **图表展现** 功能；
+   * 整个项目利用 `lazy` 和 `Suspense` 进行路由懒加载，对部分组件模块的功能组件采用了组件懒加载的方式；
  * 项目有待改进之处：
    * 整个项目运用 `redux` 进行数据状态的管理，导致项目初始完成时会产生很多不必要的渲染；
    * 项目使用 `lazy` 和 `Suspense` 进行路由懒加载，但并没有编写好一个好的 `loading` 界面；
@@ -423,4 +424,46 @@
      return false
  }
  ```
+ 
+ ### 组件懒加载 ： 通过 import() 实现异步导入，通过组件标签体属性 `(this.props.children)` 实现组件异步重现
+ 
+ [源自]: https://blog.csdn.net/weixin_41815063/article/details/89281948?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162024916416780269895683%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=162024916416780269895683&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-89281948.first_rank_v2_pc_rank_v29&amp;utm_term=react+%E7%BB%84%E4%BB%B6%E6%87%92%E5%8A%A0%E8%BD%BD
+ 
+ ```javascript
+ lazy.jsx
+ class Lazy extends Component{
+     constructor(props){
+         super(props)
+         this.state = {
+             Com: null
+         }
+         // this.load(props)
+     }
+     load = (props) => {
+         props.onload().then(com =>{
+             // console.log(com.default,'onload')
+             this.setState({ Com:com.default || null })
+         })
+     }
+     render() {
+         if(!this.state.Com){
+             return <button onClick={()=> this.load(this.props) }>点击异步加载组件</button>
+         }else{
+             console.log(typeof this.props.children , 'render')
+             return this.props.children(this.state.Com) || this.props.children.com
+         }
+     }
+ }
+ parent.jsx
+ <Lazy onload={()=>import('./child') } >
+     {
+     	Com => <Com /> 
+ 	}
+ </Lazy>
+ // 在父组件中引入被 Lazy 包装后的组件，初次只会渲染出一个按钮用于 异步加载 子组件，在 load 方法中，props.onload() 的返回值就是 Lazy 通过 onload={()=>import('./child')} 加载的子组件；
+ // Lazy prop 中的 children 属性就是渲染组件的方法 {Com => <Com /> }；
+ // 显示的时候需要将 props.onload() 的返回值 作为参数传到 children 属性；
+ ```
+ 
+
  

@@ -51,6 +51,7 @@ export default class UserForm extends Component{
         const { userItem } = this.props
         console.log(userItem)
         return(
+
             <Modal
                 destroyOnClose={true}
                 visible={this.props.visibility}

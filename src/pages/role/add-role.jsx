@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import {
-    Card,
     Form,
     Input,
     Modal

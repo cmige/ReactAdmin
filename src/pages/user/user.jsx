@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, lazy,Suspense } from 'react'
 import {
     Card,
     Button,
@@ -11,13 +11,17 @@ import LinkButton from '../../components/link-button'
 import { PAGE_SIZE } from "../../utils/contants";
 import { connect } from 'react-redux'
 import { getUserList, showForm, addUser, deleteUser, updateUser } from '../../redux/Actions/userActions'
-import UserForm from './user-form'
+
+import Lazy from '../../components/lazy'
 
 const confirm = Modal.confirm
 class User extends Component{
-    constructor(){
+    constructor() {
         super()
-        this.state = this.initColums()
+        this.state = {
+            Com : null
+        }
+        this.initColums()
     }
 
     initColums = () => {
@@ -55,15 +59,30 @@ class User extends Component{
                 render:userItem=>(
                     <>
                         <LinkButton onClick={()=>this.handleClick('update',userItem)}>修改</LinkButton>
+
+                        {/*<Lazy*/}
+                            {/*onload={()=>import('./user-form')}*/}
+                            {/*content='修改用户'*/}
+                            {/*type='LinkButton'*/}
+                            {/*onClick={ Com => {*/}
+                                {/*this.handleClick('update',userItem)*/}
+                                {/*this.setState({ Com })*/}
+                            {/*}}*/}
+                        {/*>*/}
+
+                        {/*</Lazy>*/}
                         <LinkButton onClick={()=>this.handleClick('delete',userItem)}>删除</LinkButton>
                     </>
                 )
             },
         ]
     }
-    handleClick = (type,userItem) => {
+
+    handleClick = async (type,userItem) => {
         if (type === 'update') {
             this.userItem = userItem
+            const Com = await lazy( ()=>import('./user-form'))
+            this.setState({Com})
             this.props.showForm(true)
         }
         if(type === 'addUser'){
@@ -91,9 +110,21 @@ class User extends Component{
     render() {
         const { user } = this.props
         const { userList } = user
+        console.log('user')
+        // console.log(UserForm)
         const title = (
             <>
-                <Button type='primary' onClick={()=>this.handleClick('addUser')}>创建用户</Button>
+                <Lazy
+                    onload={()=>import('./user-form')}
+                    content='创建用户'
+                    buttonType='Button'
+                    onClick={ Com => {
+                        this.props.showForm(true)
+                        this.setState({ Com })
+                    }}
+                >
+
+                </Lazy>
             </>
         )
         return(
@@ -108,14 +139,18 @@ class User extends Component{
                         pagination={{ defaultPageSize:PAGE_SIZE }}
                     />
                 </Card>
-                <UserForm
-                    visibility={ this.props.user.visibility }
-                    showForm={ this.props.showForm }
-                    userItem={ this.userItem || {} }
-                    roles={ this.props.user.roles }
-                    addUser={ this.props.addUser }
-                    updateUser={ this.props.updateUser }
-                />
+                {
+                    this.state.Com ?
+                        <this.state.Com
+                            visibility={ this.props.user.visibility }
+                            showForm={ this.props.showForm }
+                            userItem={ this.userItem || {} }
+                            roles={ this.props.user.roles }
+                            addUser={ this.props.addUser }
+                            updateUser={ this.props.updateUser }
+                        /> : null
+                }
+
             </>
 
         )

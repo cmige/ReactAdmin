@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, lazy, Suspense } from 'react'
 import {
     Card,
     Button,
@@ -9,19 +9,20 @@ import { PlusOutlined, ArrowRightOutlined } from '@ant-design/icons'
 import LinkButton from '../../components/link-button'
 import { connect } from 'react-redux'
 import { getCategoryList, showForm, update, confirmLoading, add } from '../../redux/Actions/categoryActioon'
+import Lazy from '../../components/lazy'
 
-
-import AddForm from './child/add-form'
 import UpdateForm from './child/update-form'
 
 class Category extends PureComponent{
     constructor(){
         super()
         this.state = {
-            columns:this.initColumns()
+            columns:this.initColumns(),
+            addCom:null,
+            updateCom:null
         }
     }
-    handleClick = (type,category) => {
+    handleClick = async (type,category) => {
         if (type === 'showCategoryChild') {
             const parentId = category._id
             const parentName = category.name
@@ -34,8 +35,15 @@ class Category extends PureComponent{
             this.props.showForm(1)
         }
         if (type === 'updateCategory'){
-            this.props.showForm(2)
             this.updateItem = category
+            if (!this.state.updateCom) {
+                const updateCom = await lazy(()=>import('./child/update-form'))
+                this.setState({
+                    updateCom
+                })
+            }
+            this.props.showForm(2)
+
         }
     }
     initColumns = () => {
@@ -85,7 +93,16 @@ class Category extends PureComponent{
             </>
         )
         const extra = (
-            <Button type='primary' onClick={()=>this.handleClick('add')}>  <PlusOutlined /> 添加 </Button>
+            <Lazy
+                onload={()=>import('./child/add-form')}
+                content={ '添加'}
+                buttonType='Button'
+                onClick={ Com => {
+
+                    this.handleClick('add')
+                    this.setState({ addCom:Com })
+                }}
+            />
         )
         return(
             <>
@@ -98,20 +115,32 @@ class Category extends PureComponent{
                         loading={category.loading}
                         pagination={{ defaultPageSize:3,showQuickJumper:true }}
                     />
-                    <AddForm
+                    {/*<AddForm
                         category={category}
                         showForm={this.props.showForm}
                         add={this.props.add}
                         confirmLoading={this.props.confirmLoading}
-                    />
+                    />*/}
+                    {
+                        this.state.addCom ?
+                            <this.state.addCom
+                                category={category}
+                                showForm={this.props.showForm}
+                                add={this.props.add}
+                                confirmLoading={this.props.confirmLoading}
+                            /> : null
+                    }
+                    {
+                        this.state.updateCom ?
+                            <this.state.updateCom
+                                updateItem={this.updateItem?this.updateItem:{}}
+                                category={category}
+                                showForm={this.props.showForm}
+                                update={this.props.update}
+                                confirmLoading={this.props.confirmLoading}
+                            /> : null
+                    }
 
-                    <UpdateForm
-                        updateItem={this.updateItem?this.updateItem:{}}
-                        category={category}
-                        showForm={this.props.showForm}
-                        update={this.props.update}
-                        confirmLoading={this.props.confirmLoading}
-                    />
 
 
                 </Card>

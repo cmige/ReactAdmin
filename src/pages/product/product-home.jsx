@@ -17,7 +17,10 @@ class ProductHome extends PureComponent{
     constructor(){
         super()
         this.state = {
-            columns: this.initColumns()
+            columns: this.initColumns(),
+            searchCom:null,
+            detailCom:null,
+            addProductCom:null
         }
     }
     toDetailUpdate = (type,product) => {
@@ -89,7 +92,9 @@ class ProductHome extends PureComponent{
             <>
                 <Card
                     title={<Title search={this.props.search} />}
-                    extra={<Button type="primary" onClick={()=>this.props.history.push('/product/addupdate')}><PlusOutlined/>添加商品</Button>}
+                    extra={
+                        <Button type="primary" onClick={()=>this.props.history.push('/product/addupdate')}><PlusOutlined/>添加商品</Button>
+                    }
                 >
                     <Table
                         rowKey='_id'

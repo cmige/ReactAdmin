@@ -2,12 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca6988d6-b482-4d5d-a209-a96f169a3a70" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/category/category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/category.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/category/child/update-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/child/update-form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/product/child/add-update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/add-update.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/product/child/card-title.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/card-title.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/product/product-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/product-home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/role/add-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/add-role.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/role/role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/role.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/role/set-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/set-role.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/user/user-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/user/user-form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/user/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/user/user.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,9 +60,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="835" />
+    <option name="y" value="86" />
+    <option name="width" value="784" />
+    <option name="height" value="833" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -89,7 +99,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="copyright" />
@@ -116,24 +126,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620190093012</updated>
-      <workItem from="1620190095795" duration="4468000" />
+      <workItem from="1620190095795" duration="5155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4468000" />
+    <option name="totallyTimeSpent" value="5155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14209116" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14209116" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />

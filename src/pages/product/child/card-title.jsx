@@ -39,6 +39,7 @@ export default class CardTitle extends Component{
 
 
     render() {
+        console.log('title')
         return(
             <>
                 <Form

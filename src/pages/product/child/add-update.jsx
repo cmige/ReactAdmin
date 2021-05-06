@@ -72,6 +72,7 @@ class AddUpdate extends PureComponent{
     }
 
     render() {
+
         console.log('product-addd-update')
         const  title = (
             <>

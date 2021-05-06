@@ -68,7 +68,7 @@ export default class SetRole extends PureComponent{
         // console.log('onCheck', checkedKeys, info);
     };
     render() {
-
+        console.log('setRole')
         return(
             <Modal
                 destroyOnClose

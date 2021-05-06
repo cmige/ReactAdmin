@@ -8,9 +8,7 @@ import { PAGE_SIZE } from '../../utils/contants'
 import { getRoleList, selectRole, showForm, addRole, updateRole } from '../../redux/Actions/roleActions'
 import { connect } from 'react-redux'
 import moment from 'moment'
-import AddRole from './add-role'
-import SetRole from './set-role'
-
+import Lazy from '../../components/lazy'
 
 
 
@@ -19,6 +17,9 @@ class Role extends PureComponent{
         super()
         this.state = {
             colums: this.initColums(),
+            addRoleCom:null,
+            setRoleCom:null,
+
         }
     }
     initColums = () => {
@@ -56,17 +57,30 @@ class Role extends PureComponent{
     }
 
     render() {
-
         const { role } = this.props
-        
-        // role.roleList.forEach(item=>{
-        //     item.create_time = moment(item.create_time).format('Y-M-D, h:mm:ss')
-        //     item.auth_time = moment(item.auth_time).format('Y-M-D, h:mm:ss')
-        // })
         const title = (
             <div>
-                <Button type="primary" style={{ marginRight:15 }} onClick={()=>this.props.showForm(1)} >创建角色</Button>
-                <Button type="primary" disabled={!this.props.role.selectRole._id} onClick={()=>this.props.showForm(2)}>设置角色权限</Button>
+                <Lazy
+                    onload={()=>import('./add-role')}
+                    content='创建角色'
+                    buttonType='Button'
+                    onClick={ Com => {
+                        this.props.showForm(1)
+                        this.setState({ addRoleCom: Com })
+                    }}
+                    style={{ marginRight:15 }}
+                />
+                <Lazy
+                    onload={()=>import('./set-role')}
+                    content='设置角色权限'
+                    buttonType='Button'
+                    buttonName='setRole'
+                    onClick={ Com => {
+                        this.props.showForm(2)
+                        this.setState({ setRoleCom:Com })
+                    }}
+                    selectRole_id={this.props.role.selectRole._id}
+                />
             </div>
         )
         return (
@@ -88,22 +102,27 @@ class Role extends PureComponent{
                     onRow={ this.onRow }
 
                 />
-                
-                <AddRole
-                    visibility={ role.visibility }
-                    showForm={ this.props.showForm }
-                    addRole={ this.props.addRole }
 
-                />
-                
-                <SetRole
-                    visibility={ role.visibility }
-                    showForm={ this.props.showForm }
-                    role={ role.selectRole || {} }
-                    updateRole={ this.props.updateRole }
-                    authName={ this.props.authName }
-                />
-             
+                {
+                    this.state.addRoleCom ?
+                        <this.state.addRoleCom
+                            visibility={ role.visibility }
+                            showForm={ this.props.showForm }
+                            addRole={ this.props.addRole }
+                        /> : null
+                }
+
+                {
+                    this.state.setRoleCom ?
+                        <this.state.setRoleCom
+                            visibility={ role.visibility }
+                            showForm={ this.props.showForm }
+                            role={ role.selectRole || {} }
+                            updateRole={ this.props.updateRole }
+                            authName={ this.props.authName }
+                        /> : null
+                }
+
             </Card>
 
         )
