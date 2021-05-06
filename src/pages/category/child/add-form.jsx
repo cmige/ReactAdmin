@@ -5,8 +5,7 @@ import {
     Input, Modal
 } from 'antd'
 import PropTypes from 'prop-types'
-
-
+import message from '../../../components/message'
 const { Option } = Select
 const { Item } = Form
 export default class AddForm extends PureComponent{
@@ -23,9 +22,10 @@ export default class AddForm extends PureComponent{
         this.props.confirmLoading(true)
         const form = this.formRef.current
         form.validateFields(['parentId','name'])
-            .then(date=> {
+            .then(async date=> {
                 if (!date.parentId) return
-                this.props.add(date)
+                const result = await this.props.add(date)
+                message(result)
                 form.resetFields();
             })
 

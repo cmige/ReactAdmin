@@ -2,7 +2,7 @@ import React, { Component, Suspense } from 'react'
 import { connect } from "react-redux";
 import { Layout } from 'antd';
 import { Redirect, Route,Switch } from 'react-router-dom'
-import { getUser, logout } from '../../redux/Actions/userActions'
+import { logout } from '../../redux/Actions/userActions'
 import Cookie from 'js-cookie'
 import './admin.less'
 
@@ -12,15 +12,6 @@ import LeftNav from '../../components/left-nav'
 
 const {  Footer, Content } = Layout;
 class Admin extends Component{
-    componentDidMount() {
-        const { _id } = this.props.user
-        const userId = Cookie.get('userid')
-        if (!userId) return null
-            if (_id !== userId){
-            // 自动登录请求 --> 用户页面刷新丢失redux 要重新获取
-            //     this.props.getUser()
-            }
-    }
 
     render() {
         const { user } = this.props
@@ -58,5 +49,5 @@ class Admin extends Component{
 }
 export default connect(
     state=>({ user: state.user }),
-    { getUser, logout }
+    { logout }
 )(Admin)

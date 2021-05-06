@@ -9,7 +9,7 @@ import Title from './child/card-title'
 import LinkButton from '../../components/link-button'
 import { getProductList, search, oneProduct, updateState } from '../../redux/Actions/productAction'
 import { PAGE_SIZE } from '../../utils/contants'
-
+import message from '../../components/message'
 import './product.less'
 import {PlusOutlined} from "@ant-design/icons";
 
@@ -34,9 +34,9 @@ class ProductHome extends PureComponent{
                 pathname:"/product/addupdate"
             })
     }
-    changeState = (product) => {
+    changeState = async (product) => {
         let { status, _id } = product
-        this.props.updateState(status, _id)
+        message(await this.props.updateState(status, _id))
     }
 
     initColumns = () =>{
@@ -80,9 +80,8 @@ class ProductHome extends PureComponent{
             }
         ]
     }
-    componentDidMount() {
-        this.props.getProductList(1)
-        console.log('componentDidMount')
+    async componentDidMount() {
+        message(await this.props.getProductList(1))
     }
 
     render() {
@@ -107,9 +106,9 @@ class ProductHome extends PureComponent{
                             defaultPageSize:PAGE_SIZE,
                             total:product.total,
                             showQuickJumper:true,
-                            onChange: pageNum => {
+                            onChange: async pageNum => {
                                 this.pageNum = pageNum
-                                this.props.getProductList(pageNum)
+                                message(await this.props.getProductList(pageNum))
                             }
                         }}
                     >

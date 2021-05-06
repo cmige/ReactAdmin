@@ -7,7 +7,7 @@ import {
 } from 'antd'
 
 import PropTypes from 'prop-types'
-
+import message from '../../../components/message'
 const Item = Form.Item
 const Option = Select.Option
 export default class CardTitle extends Component{
@@ -26,11 +26,11 @@ export default class CardTitle extends Component{
         this.setState({ onSelect:value.searchType })
         const form = this.formRef.current
         form.validateFields(['searchType','searchName'])
-            .then(date=> {
+            .then(async date=> {
                 let { searchName, searchType } = date
                 searchName = searchName? searchName:''
                 const pageNum = 1
-                this.props.search(pageNum, searchName, searchType)
+                message(await this.props.search(pageNum, searchName, searchType))
                 // date.searchName?date.searchName:''
                 form.resetFields();
             })

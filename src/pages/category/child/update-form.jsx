@@ -4,6 +4,7 @@ import {
     Input, Modal
 } from 'antd'
 import PropTypes from 'prop-types'
+import message from '../../../components/message'
 const { Item } = Form
 export default class UpdateForm extends PureComponent{
 
@@ -12,11 +13,12 @@ export default class UpdateForm extends PureComponent{
         this.props.confirmLoading(true)
         const form = this.formRef.current
         form.validateFields(['name'])
-            .then(date=> {
+            .then(async date=> {
                 if (date.name === this.props.updateItem.name) return this.props.showForm(0)
                 const categoryId = this.props.updateItem._id
                 const name = date.name
-                this.props.update(categoryId,name)
+                const result = await this.props.update(categoryId,name)
+                message(result)
                 form.resetFields();
             })
 

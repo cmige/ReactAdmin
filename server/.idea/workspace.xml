@@ -2,21 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca6988d6-b482-4d5d-a209-a96f169a3a70" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/image-1620296285423.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/image-1620297243972.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/image-1620297260980.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/message/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/message/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/admin/admin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/admin/admin.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/category/category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/category.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/category/child/add-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/child/add-form.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/category/child/update-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/child/update-form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/login/login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/product/child/add-update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/add-update.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/product/child/card-title.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/card-title.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/product/child/pictures-wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/pictures-wall.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/product/product-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/product-home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pages/product/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/product.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/role/add-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/add-role.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/role/role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/role.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/role/set-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/set-role.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/user/user-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/user/user-form.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/user/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/user/user.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/Actions/categoryActioon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/categoryActioon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/Actions/productAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/productAction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/Actions/roleActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/roleActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/Actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/userActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/reducers/categoryReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/reducers/productReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/reducers/productReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/reducers/roleReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/reducers/roleReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/redux/reducers/userReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/reducers/userReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,10 +73,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="835" />
-    <option name="y" value="86" />
-    <option name="width" value="784" />
-    <option name="height" value="833" />
+    <option name="x" value="-8" />
+    <option name="width" value="1930" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />

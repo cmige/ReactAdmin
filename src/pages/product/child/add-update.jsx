@@ -13,7 +13,7 @@ import { connect } from 'react-redux'
 import { getCascaderName, loading, addOrUpdate } from '../../../redux/Actions/productAction'
 import PictureWall from './pictures-wall'
 import RichEditor from '../rich-text-editor'
-import Message from '../../../components/message'
+import message from '../../../components/message'
 
 const Item = Form.Item
 const TextArea = Input.TextArea
@@ -64,7 +64,7 @@ class AddUpdate extends PureComponent{
         const { child } = this.props
         if (child) product._id = child._id
         const result = await this.props.addOrUpdate(product)
-        Message(result.status,result.msg)
+        message(result)
         setTimeout(()=>{
             if (result.status === 0) this.props.history.goBack()
         },1000)

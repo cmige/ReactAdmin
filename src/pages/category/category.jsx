@@ -10,8 +10,7 @@ import LinkButton from '../../components/link-button'
 import { connect } from 'react-redux'
 import { getCategoryList, showForm, update, confirmLoading, add } from '../../redux/Actions/categoryActioon'
 import Lazy from '../../components/lazy'
-
-import UpdateForm from './child/update-form'
+import message from '../../components/message'
 
 class Category extends PureComponent{
     constructor(){
@@ -26,7 +25,8 @@ class Category extends PureComponent{
         if (type === 'showCategoryChild') {
             const parentId = category._id
             const parentName = category.name
-            this.props.getCategoryList(parentId,parentName)
+            const result = await this.props.getCategoryList(parentId,parentName)
+            message(result)
         }
         if (type === 'showCategory') {
             this.props.getCategoryList('0')
@@ -72,9 +72,10 @@ class Category extends PureComponent{
         return columns
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         const { parentId } = this.props.category
-        this.props.getCategoryList(parentId)
+        const result = await this.props.getCategoryList(parentId)
+        message(result)
     }
 
     render() {

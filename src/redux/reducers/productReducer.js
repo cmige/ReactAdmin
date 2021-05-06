@@ -1,26 +1,15 @@
 import {
     RECEIVE_GET_PRODUCT_LIST_SUC,
-    RECEIVE_GET_PRODUCT_LIST_FAIL,
     LOADING,
     RECEIVE_PRODUCT_SEARCH_SUC,
-    RECEIVE_PRODUCT_SEARCH_FAIL,
     RECEIVE_ONE_PRODUCT_SUC,
-    RECEIVE_ONE_PRODUCT_FAIL,
     RECEIVE_UPDATE_PRODUCT_STATUS_SUC,
-    RECEIVE_UPDATE_PRODUCT_STATUS_FAIL,
     RECEIVE_CASCADER_NAME_SUC,
-    RECEIVE_CASCADER_NAME_FAIL,
-
     RECEIVE_UPLOAD_PICTURE_SUC,
-    RECEIVE_UPLOAD_PICTURE_FAIL,
     RECEIVE_PREVIEW_IMAGE,
     RECEIVE_DELETE_IMAGE_SUC,
-    RECEIVE_DELETE_IMAGE_FAIL,
-
     RECEIVE_ADD_PRODUCT_SUC,
-    RECEIVE_ADD_PRODUCT_FAIL,
     RECEIVE_UPDATE_PRODUCT_SUC,
-    RECEIVE_UPDATE_PRODUCT_FAIL
 } from '../actions_type'
 
 
@@ -39,7 +28,7 @@ const initProduct = {
 
 function product(state=initProduct,action) {
     switch (action.type) {
-        case RECEIVE_GET_PRODUCT_LIST_SUC:
+        case RECEIVE_GET_PRODUCT_LIST_SUC:                  // receive_get_product_list_suc
             const { total, list, pageNum } = action.data
             return {
                 total,
@@ -47,11 +36,7 @@ function product(state=initProduct,action) {
                 loading:false,
                 pageNum
             }
-        case RECEIVE_GET_PRODUCT_LIST_FAIL:
-            return {
-                msg: action.msg
-            }
-        case LOADING:
+        case LOADING:                                       // loading
             let selectedOptions = action.data,
                 loadingArr = []
             if (selectedOptions) {
@@ -67,26 +52,19 @@ function product(state=initProduct,action) {
                 loading:true,
                 cascaderOptions: loadingArr
             }
-        case RECEIVE_PRODUCT_SEARCH_SUC:
+        case RECEIVE_PRODUCT_SEARCH_SUC:                    // receive_product_search_suc
             return {
                 ...state,
                 ...action.data,
                 loading:false,
             }
-        case RECEIVE_PRODUCT_SEARCH_FAIL:
-            return {
-                msg: action.msg
-            }
-        case RECEIVE_ONE_PRODUCT_SUC:
+        case RECEIVE_ONE_PRODUCT_SUC:                       // receive_one_product_suc
             return {
                 ...state,
                 child:action.data
             }
-        case RECEIVE_ONE_PRODUCT_FAIL:
-            return {
-                msg: action.msg
-            }
-        case RECEIVE_UPDATE_PRODUCT_STATUS_SUC:
+
+        case RECEIVE_UPDATE_PRODUCT_STATUS_SUC:             // receive_update_product_status_suc
             let arr = [...state.list]
             let { _id, status } = action.data
             arr.forEach(product => {
@@ -98,11 +76,8 @@ function product(state=initProduct,action) {
                 ...state,
                 list: arr
             }
-        case RECEIVE_UPDATE_PRODUCT_STATUS_FAIL:
-            return {
-                msg: action.msg
-            }
-        case RECEIVE_CASCADER_NAME_SUC:
+
+        case RECEIVE_CASCADER_NAME_SUC:                     // receive_cascader_name_suc
             let { cascaderArr, selected } = action.data
 
             let cascaderOptions = []
@@ -142,27 +117,19 @@ function product(state=initProduct,action) {
                 ...state,
                 cascaderOptions
             }
-        case RECEIVE_CASCADER_NAME_FAIL:
-            return {
-                msg: action.msg
-            }
 
-        case RECEIVE_ADD_PRODUCT_SUC:
+        case RECEIVE_ADD_PRODUCT_SUC:                       // receive_add_product_suc
             return {
                 ...state,
                 addSuc:true
             }
-        case RECEIVE_ADD_PRODUCT_FAIL:
-            return
-        case RECEIVE_UPDATE_PRODUCT_SUC:
+
+        case RECEIVE_UPDATE_PRODUCT_SUC:                    // receive_update_product_suc
             return {
                 ...state,
                 child:action.data
             }
-        case RECEIVE_UPDATE_PRODUCT_FAIL:
-            return {
-                msg:action.msg
-            }
+
         default:
             return state
     }
@@ -194,8 +161,7 @@ export function pictureWall(state=initPictureWall,action) {
                 ...state,
                 fileList
             }
-        case RECEIVE_UPLOAD_PICTURE_FAIL:
-            return state
+
         case RECEIVE_PREVIEW_IMAGE:
             const { imgFile, type } = action.data
             if (type === 'cancel')

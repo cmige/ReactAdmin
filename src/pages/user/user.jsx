@@ -13,7 +13,7 @@ import { connect } from 'react-redux'
 import { getUserList, showForm, addUser, deleteUser, updateUser } from '../../redux/Actions/userActions'
 
 import Lazy from '../../components/lazy'
-
+import message from '../../components/message'
 const confirm = Modal.confirm
 class User extends Component{
     constructor() {
@@ -60,17 +60,6 @@ class User extends Component{
                     <>
                         <LinkButton onClick={()=>this.handleClick('update',userItem)}>修改</LinkButton>
 
-                        {/*<Lazy*/}
-                            {/*onload={()=>import('./user-form')}*/}
-                            {/*content='修改用户'*/}
-                            {/*type='LinkButton'*/}
-                            {/*onClick={ Com => {*/}
-                                {/*this.handleClick('update',userItem)*/}
-                                {/*this.setState({ Com })*/}
-                            {/*}}*/}
-                        {/*>*/}
-
-                        {/*</Lazy>*/}
                         <LinkButton onClick={()=>this.handleClick('delete',userItem)}>删除</LinkButton>
                     </>
                 )
@@ -95,16 +84,18 @@ class User extends Component{
                 icon: <ExclamationCircleOutlined />,
                 okText:'确认',
                 cancelText:'取消',
-                onOk:() => {
-                    this.props.deleteUser(userItem._id)
+                onOk:async () => {
+                    const result = await this.props.deleteUser(userItem._id)
+                    message(result)
                 }
             });
         }
 
     }
 
-    componentDidMount() {
-        this.props.getUserList()
+    async componentDidMount() {
+        const result = await this.props.getUserList()
+        message(result)
     }
 
     render() {

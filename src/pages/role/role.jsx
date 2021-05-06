@@ -9,7 +9,7 @@ import { getRoleList, selectRole, showForm, addRole, updateRole } from '../../re
 import { connect } from 'react-redux'
 import moment from 'moment'
 import Lazy from '../../components/lazy'
-
+import message from '../../components/message'
 
 
 class Role extends PureComponent{
@@ -52,8 +52,9 @@ class Role extends PureComponent{
             }
         }
     }
-    componentDidMount() {
-        this.props.getRoleList()
+    async componentDidMount() {
+        const result = await this.props.getRoleList()
+        message(result)
     }
 
     render() {

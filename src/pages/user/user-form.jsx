@@ -7,7 +7,7 @@ import {
 
 } from 'antd'
 import PropType from 'prop-types'
-
+import message from '../../components/message'
 const Item = Form.Item
 const Option = Select.Option
 export default class UserForm extends Component{
@@ -30,16 +30,19 @@ export default class UserForm extends Component{
         const form = this.formRef.current
         const { userItem } = this.props
         form.validateFields(['username','password','phone','email','role_id'])
-            .then(user=>{
+            .then(async user=>{
                  if (user.username && !userItem._id) {
-                     this.props.addUser(user)
+                     const result = await this.props.addUser(user)
+                     message(result)
                  }
                  if (user.username && userItem._id) {
                      user.password = userItem.password
                      user._id = userItem._id
-                     this.props.updateUser(user)
+                     const result = await this.props.updateUser(user)
+                     message(result)
                  }
-                this.props.showForm(false)
+                 setTimeout(()=>this.props.showForm(false),1000)
+
             })
         
     }

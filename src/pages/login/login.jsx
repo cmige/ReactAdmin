@@ -11,20 +11,18 @@ import {Redirect} from 'react-router-dom'
 
 import './login.less'
 import logo from '../../assets/images/logo.png'
-
+import message from '../../components/message'
 class Login extends Component{
-    state = {
-        username:'',
-        password:''
-
-    }
-    onFinish = async (value) => {
-        if (value){
-            // const {username,password} = value
-            this.setState(value,()=>{
-                this.props.login(this.state.username,this.state.password)
+    loginRef = React.createRef()
+    onFinish = (value) => {
+        const form = this.loginRef.current
+        form.validateFields(['username','password'])
+            .then(async value =>{
+                if (value.username && value.password) {
+                    const result = await this.props.login(value.username,value.password)
+                    message(result)
+                }
             })
-        }
     }
 
     validatePwd =(rule, value)=>{
@@ -61,6 +59,7 @@ class Login extends Component{
                         className="login-form"
                         onFinish={this.onFinish}
                         initialValues={{username:"admin"}}
+                        ref={this.loginRef}
                     >
                         {/*声明式验证*/}
                         <Form.Item

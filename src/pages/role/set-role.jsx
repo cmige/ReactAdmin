@@ -4,16 +4,15 @@ import {
     Form,
     Input,
     Tree,
-    message
+    // message
 } from 'antd'
 import PropType from "prop-types";
 import Menus from '../../config/menuConfig'
-
-
+import message from '../../components/message'
 const Item = Form.Item
-message.config({
+/*message.config({
     duration:1
-})
+})*/
 export default class SetRole extends PureComponent{
     constructor(props){
         super(props)
@@ -55,18 +54,13 @@ export default class SetRole extends PureComponent{
         this.props.role.menus = menus
         this.props.role.auth_name = this.props.authName
         const result = await this.props.updateRole(this.props.role)
-        if (result === 0){
-            return Promise.resolve(message.success('更新角色权限成功'))
-        } else {
-            return Promise.resolve(message.error(result))
-        }
+        message(result)
+
     }
     handleCancel = () => {
         this.props.showForm(0)
     }
-    onCheck = (checkedKeys, info) => {
-        // console.log('onCheck', checkedKeys, info);
-    };
+
     render() {
         console.log('setRole')
         return(

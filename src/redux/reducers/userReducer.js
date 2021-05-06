@@ -1,17 +1,11 @@
 import {
     RECEIVE_LOGIN_SUCCESS,
-    RECEIVE_LOGIN_FAILED,
     RECEIVE_LOGOUT,
     RECEIVE_GET_USER_SUCCESS,
-    RECEIVE_GET_USER_FAILED,
     RECEIVE_GET_USER_LIST_SUC,
-    RECEIVE_GET_USER_LIST_FAILED,
     RECEIVE_SHOW_FORM,
-
     RECEIVE_ADD_USER_SUC,
-    RECEIVE_ADD_USER_FAIL,
     RECEIVE_UPDATE_USER_SUC,
-    RECEIVE_UPDATE_USER_FAIL,
     RECEIVE_DELETE_USER_SUC,
 } from '../actions_type'
 
@@ -26,33 +20,27 @@ const initUser = {
 function user(state=initUser,action) {
 
     switch (action.type) {
-        case RECEIVE_LOGIN_SUCCESS:
+        case RECEIVE_LOGIN_SUCCESS:         // receive_login_success
             return { ...action.data }
-        case RECEIVE_LOGIN_FAILED:
-            return { msg:action.data }
-        case RECEIVE_GET_USER_SUCCESS:
-            return action.data
-        case RECEIVE_GET_USER_FAILED:
-            return { msg:action.data }
-        case RECEIVE_LOGOUT:
+
+        case RECEIVE_LOGOUT:                // receive_logout
             return initUser
-        case RECEIVE_GET_USER_LIST_SUC:
+        case RECEIVE_GET_USER_LIST_SUC:     // receive_get_user_list_suc
             const {users,roles} = action.data
             return {
                 ...state,
                 userList:users,
                 roles
             }
-        case RECEIVE_ADD_USER_SUC:
+        case RECEIVE_ADD_USER_SUC:          // receive_add_user_suc
             return {
                 ...state,
                 visibility:false,
                 userList:[...state.userList, action.data]
             }
-        case RECEIVE_UPDATE_USER_SUC:
+        case RECEIVE_UPDATE_USER_SUC:       // receive_update_user_suc
             const updateItem = action.data
             const userArr = [...state.userList]
-            console.log(updateItem)
             userArr.forEach(( user, index ) => {
                 if (user._id === updateItem._id){
                     userArr[index] = updateItem
@@ -63,7 +51,7 @@ function user(state=initUser,action) {
                 visibility:false,
                 userList:userArr
             }
-        case RECEIVE_DELETE_USER_SUC:
+        case RECEIVE_DELETE_USER_SUC:       // receive_delete_user_suc
             const deleteItem = action.data
             const arr = [...state.userList]
             arr.forEach(( user, index ) => {
@@ -75,7 +63,7 @@ function user(state=initUser,action) {
                 ...state,
                 userList:arr
             }
-        case RECEIVE_SHOW_FORM:
+        case RECEIVE_SHOW_FORM:             // receive_show_form
             return {
                 ...state,
                 visibility:action.data

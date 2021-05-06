@@ -5,7 +5,7 @@ import { PlusOutlined } from '@ant-design/icons';
 import { connect } from 'react-redux'
 import { uploadPicture, previewImage, deletePicture, initPictureWall } from '../../../redux/Actions/productAction'
 import PropType from 'prop-types'
-
+import message from '../../../components/message'
 const BASE_URL = '/api'
 
 function getBase64(file) {
@@ -31,8 +31,8 @@ class PictureWall extends Component {
     handleCancel = () => this.props.previewImage('cancel')
     handlePreview =  file => this.props.previewImage('preview',file)
 
-    handleChange = ({ file,fileList }) => {
-        if (file.status === 'removed') this.props.deletePicture(file)
+    handleChange = async ({ file,fileList }) => {
+        if (file.status === 'removed') message(await this.props.deletePicture(file))
 
         // let files = [{
         //     percent:fileList[0].percent,
@@ -60,7 +60,7 @@ class PictureWall extends Component {
         };
         fmData.append("image", file);
         try {
-            this.props.uploadPicture(fmData,config,file)
+            message(await this.props.uploadPicture(fmData,config,file))
             // onSuccess('ok')
             // const res = await axios.post(
             //     "https://jsonplaceholder.typicode.com/posts",

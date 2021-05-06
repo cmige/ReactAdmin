@@ -5,7 +5,7 @@ import {
     Modal
 } from 'antd'
 import PropType from 'prop-types'
-
+import message from '../../components/message'
 const Item = Form.Item
 export default class AddRole extends PureComponent{
     static propType = {
@@ -15,13 +15,13 @@ export default class AddRole extends PureComponent{
     }
     formRef = React.createRef()
 
-    handleOk = async () => {
+    handleOk = () => {
         const form = this.formRef.current
         form.validateFields(['roleName'])
-            .then(data=> {
+            .then(async data=> {
                 if (!data.roleName) return
-                const result = this.props.addRole(data.roleName)
-                result.then(value => console.log(value))
+                const result = await this.props.addRole(data.roleName)
+                message(result)
                 form.resetFields()
             })
 

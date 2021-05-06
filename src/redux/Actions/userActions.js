@@ -1,71 +1,43 @@
 
 import {
-    RECEIVE_LOGIN_SUCCESS,
-    RECEIVE_LOGIN_FAILED,
-    RECEIVE_LOGOUT,
-    RECEIVE_GET_USER_SUCCESS,
-    RECEIVE_GET_USER_FAILED,
-    RECEIVE_GET_USER_LIST_SUC,
-    RECEIVE_GET_USER_LIST_FAILED, 
-    RECEIVE_SHOW_FORM,
-
-    RECEIVE_ADD_USER_SUC,
-    RECEIVE_ADD_USER_FAIL,
-    RECEIVE_UPDATE_USER_SUC,
-    RECEIVE_UPDATE_USER_FAIL,
-    RECEIVE_DELETE_USER_SUC,
-    RECEIVE_DELETE_USER_FAIL
+    RECEIVE_LOGIN_SUCCESS,      // receive_login_success
+    RECEIVE_LOGOUT,             // receive_logout
+    RECEIVE_GET_USER_LIST_SUC,  // receive_get_user_list_suc
+    RECEIVE_SHOW_FORM,          // receive_show_form
+    RECEIVE_ADD_USER_SUC,       // receive_add_user_suc
+    RECEIVE_UPDATE_USER_SUC,    // receive_update_user_suc
+    RECEIVE_DELETE_USER_SUC,    // receive_delete_user_suc
 } from '../actions_type'
 
 import {
     reqLogin,
-    reqGetUser,
     reqGetUserList,
     reqAddUser,
     reqDeleteUser,
     reqUpdateUser
 } from '../../api'
 
-
-import { message } from 'antd'
-
-const loginSuccess = (user) =>({ type:RECEIVE_LOGIN_SUCCESS,data:user })
-const loginFailed = ( msg ) =>({type:RECEIVE_LOGIN_FAILED,data:msg})
-const getUserSuccess = (user) => ({ type:RECEIVE_GET_USER_SUCCESS, data:user })
-const getUserFailed = (msg) => ({ type:RECEIVE_GET_USER_FAILED, data:msg })
 export const logout = () => ({ type: RECEIVE_LOGOUT,data:{}})
-const getUserListSuc = (users) => ({ type:RECEIVE_GET_USER_LIST_SUC,data:users })
 export const showForm = (visibility) => ({ type:RECEIVE_SHOW_FORM, data:visibility })
 
+const loginSuccess = (user) =>({ type:RECEIVE_LOGIN_SUCCESS,data:user })
+const getUserListSuc = (users) => ({ type:RECEIVE_GET_USER_LIST_SUC,data:users })
 const addUserSuc = (user) => ({ type:RECEIVE_ADD_USER_SUC, data:user })
-const addUserFail = (msg) => ({ type:RECEIVE_ADD_USER_FAIL, msg:msg })
 const updateUserSuc = (user) => ({ type:RECEIVE_UPDATE_USER_SUC, data:user })
-const updateUserFail = (msg) => ({ type:RECEIVE_UPDATE_USER_FAIL, msg:msg })
 const deleteUserSuc = (deleteItem) => ({ type:RECEIVE_DELETE_USER_SUC, data:deleteItem })
 
 
 export const login = (username,password) =>{
     return async dispatch =>{
         const result = await reqLogin(username,password)
+        console.log(result)
         if (result.status === 0){
             dispatch(loginSuccess(result.data))
-            message.success("登录成功",1)
+            return Promise.resolve({status:0,content:'登录成功'})
         } else {
-            dispatch(loginFailed({msg:result.msg}))
-            message.error(result.msg,1)
+            return Promise.resolve({status:1,content:result.msg})
         }
 
-    }
-}
-
-export const getUser = () =>{
-    return async dispatch =>{
-        const result = await reqGetUser()
-        if (result.status === 1){
-            dispatch(getUserSuccess(result.data))
-        }else {
-            dispatch(getUserFailed(result.msg))
-        }
     }
 }
 
@@ -74,7 +46,9 @@ export const getUserList = () => {
         const result = await reqGetUserList()
         if (result.status === 0) {
             dispatch(getUserListSuc(result.data))
-            return Promise.resolve(result.status)
+            return Promise.resolve({status:0,content:'获取用户列表成功'})
+        }else {
+            return Promise.resolve({status:1,content:'获取用户列表异常，请重新尝试'})
         }
     }
 }
@@ -84,6 +58,9 @@ export const addUser = (user) => {
         const result = await reqAddUser(user)
         if (result.status === 0) {
             dispatch(addUserSuc(result.data))
+            return Promise.resolve({status:0,content:`添加用户成功`})
+        }else {
+            return Promise.resolve({status:1,content:result.msg})
         }
     }
 }
@@ -92,6 +69,9 @@ export const deleteUser = (userId) => {
         const result = await reqDeleteUser(userId)
         if (result.status === 0) {
             dispatch(deleteUserSuc(result.data))
+            return Promise.resolve({status:0,content:`删除${result.data.username}成功`})
+        }else {
+            return Promise.resolve({status:1,content:result.msg})
         }
     }
 }
@@ -100,6 +80,9 @@ export const updateUser = (user) => {
         const result = await reqUpdateUser(user)
         if (result.status === 0) {
             dispatch(updateUserSuc(result.data))
+            return Promise.resolve({ status:0,content:`更新${result.data.username}用户成功` })
+        }else {
+            return Promise.resolve({status:1,content:result.msg})
         }
     }
 }
