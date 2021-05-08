@@ -30,6 +30,7 @@ export default class CardTitle extends Component{
                 let { searchName, searchType } = date
                 searchName = searchName? searchName:''
                 const pageNum = 1
+                console.log(date,'title')
                 message(await this.props.search(pageNum, searchName, searchType))
                 // date.searchName?date.searchName:''
                 form.resetFields();

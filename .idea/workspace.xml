@@ -2,33 +2,26 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/redux/Actions/userActions.js" description="    RECEIVE_ADD_USER_SUC,&#10;    RECEIVE_ADD_USER_FAI..." line="6" />
+    <bookmark url="file://$PROJECT_DIR$/src/redux/reducers/roleReducer.js" description="const initRole = {&#10;    roleList:[],&#10;    selectRole..." line="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/redux/reducers/userReducer.js" description="const initUser = {&#10;    _id:'',&#10;    username:&quot;&quot;,&#10;  ..." line="10" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="961c422c-4419-4829-8f69-e259744ed54b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/public/upload/image-1620296285423.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/upload/image-1620297243972.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/public/upload/image-1620297260980.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/message/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/message/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/left-nav/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/left-nav/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/admin/admin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/admin.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category/category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/category.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/category/child/add-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/child/add-form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/category/child/update-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/category/child/update-form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/login/login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/product/child/add-update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/child/add-update.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/product/child/card-title.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/child/card-title.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/product/child/pictures-wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/child/pictures-wall.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/product/child/product-detail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/child/product-detail.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/product/product-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/product/product-home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/role/add-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/add-role.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/role/role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/role.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/role/set-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/role/set-role.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/user/user-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/user/user-form.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/user/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/user/user.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Actions/categoryActioon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Actions/categoryActioon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/Actions/productAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Actions/productAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Actions/roleActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Actions/roleActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/Actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Actions/userActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/categoryReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/productReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/productReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducers/roleReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducers/roleReducer.js" afterDir="false" />
@@ -48,69 +41,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/redux/Actions/productAction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/product/child/pictures-wall.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+            <state relative-caret-position="161">
+              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
-                <element signature="e#0#67#0" expanded="true" />
+                <element signature="e#0#330#0" expanded="true" />
+                <element signature="e#4154#4484#0" />
+                <element signature="e#4526#4926#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/redux/reducers/productReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="123" column="27" lean-forward="true" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#659#0" expanded="true" />
-                <element signature="n#!!block;n#pictureWall#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/product/product-home.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="61" column="102" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="102" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/product/child/card-title.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pages/product/child/add-update.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="431">
+                <caret line="545" column="1" lean-forward="true" selection-start-line="545" selection-start-column="1" selection-end-line="545" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -119,10 +68,29 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>search</find>
       <find>SEARCH</find>
       <find>selectRole</find>
       <find>FAIL</find>
+      <find>Suspense</find>
+      <find>error</find>
+      <find>showCategory</find>
+      <find>addRoleSuc</find>
+      <find>userItem</find>
+      <find>addSuc</find>
+      <find>this.pageNum</find>
+      <find>cascaderOptions</find>
+      <find>RECEIVE_ONE_PRODUCT_SUC</find>
+      <find>oneProduct</find>
+      <find>pCategoryId</find>
+      <find>onChange</find>
+      <find>loading</find>
+      <find>GETCASCADERSUC</find>
+      <find>getCascaderName</find>
+      <find>changeState</find>
+      <find>initPictureWall</find>
+      <find>RECEIVE_PREVIEW_IMAGE</find>
+      <find>search</find>
+      <find>searchSuc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,43 +100,44 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/server/router.js" />
-        <option value="$PROJECT_DIR$/src/api/index.js" />
         <option value="$PROJECT_DIR$/src/redux/actions_type.js" />
-        <option value="$PROJECT_DIR$/src/components/left-nav/index.jsx" />
         <option value="$PROJECT_DIR$/src/components/message/message.jsx" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/components/lazy/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/product/product.jsx" />
         <option value="$PROJECT_DIR$/src/components/message/index.jsx" />
         <option value="$PROJECT_DIR$/src/pages/login/login.jsx" />
-        <option value="$PROJECT_DIR$/src/pages/admin/admin.jsx" />
         <option value="$PROJECT_DIR$/src/redux/Actions/userActions.js" />
-        <option value="$PROJECT_DIR$/src/pages/user/user.jsx" />
         <option value="$PROJECT_DIR$/src/pages/user/user-form.jsx" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/userReducer.js" />
-        <option value="$PROJECT_DIR$/src/pages/role/role.jsx" />
         <option value="$PROJECT_DIR$/src/pages/role/add-role.jsx" />
         <option value="$PROJECT_DIR$/src/redux/Actions/roleActions.js" />
-        <option value="$PROJECT_DIR$/src/redux/reducers/roleReducer.js" />
         <option value="$PROJECT_DIR$/src/pages/role/set-role.jsx" />
-        <option value="$PROJECT_DIR$/src/pages/category/category.jsx" />
         <option value="$PROJECT_DIR$/src/pages/category/child/update-form.jsx" />
-        <option value="$PROJECT_DIR$/src/pages/category/child/add-form.jsx" />
-        <option value="$PROJECT_DIR$/src/redux/Actions/categoryActioon.js" />
+        <option value="$PROJECT_DIR$/src/components/left-nav/index.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/admin/admin.jsx" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/userReducer.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/categoryReducer.js" />
-        <option value="$PROJECT_DIR$/src/pages/product/child/card-title.jsx" />
-        <option value="$PROJECT_DIR$/src/pages/product/child/add-update.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/category/category.jsx" />
+        <option value="$PROJECT_DIR$/src/redux/Actions/categoryActioon.js" />
+        <option value="$PROJECT_DIR$/src/pages/category/child/add-form.jsx" />
+        <option value="$PROJECT_DIR$/src/redux/reducers/roleReducer.js" />
+        <option value="$PROJECT_DIR$/src/pages/role/role.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/user/user.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/product/child/product-detail.jsx" />
         <option value="$PROJECT_DIR$/src/pages/product/product-home.jsx" />
-        <option value="$PROJECT_DIR$/src/pages/product/child/pictures-wall.jsx" />
+        <option value="$PROJECT_DIR$/src/api/index.js" />
+        <option value="$PROJECT_DIR$/src/pages/product/child/add-update.jsx" />
+        <option value="$PROJECT_DIR$/src/pages/product/child/card-title.jsx" />
         <option value="$PROJECT_DIR$/src/redux/Actions/productAction.js" />
         <option value="$PROJECT_DIR$/src/redux/reducers/productReducer.js" />
+        <option value="$PROJECT_DIR$/src/pages/product/child/pictures-wall.jsx" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1930" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="952" />
+    <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -195,6 +164,12 @@
               <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-damin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-damin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -202,20 +177,35 @@
               <item name="react-damin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="lazy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-damin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="left-nav" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-damin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-damin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-damin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-damin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+              <item name="child" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-damin" type="b2602c69:ProjectViewProjectNode" />
@@ -308,18 +298,19 @@
       <updated>1618996407180</updated>
       <workItem from="1618996408932" duration="3707000" />
       <workItem from="1620136220540" duration="9236000" />
-      <workItem from="1620190082203" duration="49705000" />
+      <workItem from="1620190082203" duration="51210000" />
+      <workItem from="1620382425655" duration="33993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62648000" />
+    <option name="totallyTimeSpent" value="98146000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1544" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18506056" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18565683" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -333,12 +324,33 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5020747" side_tool="true" weight="0.3295129" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4979253" visible="true" weight="0.25931233" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4979253" visible="true" weight="0.2592068" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Mongo Explorer" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.7842324" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5020747" side_tool="true" weight="0.3295129" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4979253" visible="true" weight="0.25931233" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -348,15 +360,25 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/product/child/add-update.jsx</url>
-          <line>68</line>
-          <properties lambdaOrdinal="-1" />
+          <line>90</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/pages/product/child/add-update.jsx</url>
-          <line>67</line>
-          <properties lambdaOrdinal="-1" />
+          <line>89</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/redux/reducers/productReducer.js</url>
+          <line>42</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/pages/product/child/add-update.jsx</url>
+          <line>57</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -387,13 +409,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/home/home.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1255">
@@ -411,16 +426,6 @@
           <caret line="67" column="34" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="34" />
           <folding>
             <element signature="e#0#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/left-nav/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -446,16 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="96">
-            <caret line="447" column="15" selection-start-line="447" selection-start-column="14" selection-end-line="447" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -473,40 +468,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/product/child/product-detail.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="53" lean-forward="true" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/product/product.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/userReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="61" column="20" lean-forward="true" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/user/user.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="60" column="75" selection-start-line="60" selection-start-column="74" selection-end-line="60" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-            <element signature="n#!!block;n#constructor#0;n#User#0" />
           </folding>
         </state>
       </provider>
@@ -538,42 +505,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/admin/admin.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="23" column="47" lean-forward="true" selection-start-line="23" selection-start-column="47" selection-end-line="23" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/Actions/userActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="60" column="63" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="63" />
-          <folding>
-            <element signature="e#1#429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/role/add-role.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="21" column="42" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="42" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/roleReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#252#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -588,47 +525,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/role/role.jsx">
+    <entry file="file://$PROJECT_DIR$/src/pages/admin/admin.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="111" column="58" lean-forward="true" selection-start-line="111" selection-start-column="58" selection-end-line="111" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#71#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="95">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/Actions/roleActions.js">
+    <entry file="file://$PROJECT_DIR$/src/components/left-nav/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="39" column="65" lean-forward="true" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/categoryReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1330">
-          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+        <state relative-caret-position="454">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
-            <element signature="e#0#184#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/category/category.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+        <state relative-caret-position="243">
+          <caret line="112" column="53" selection-start-line="112" selection-start-column="38" selection-end-line="112" selection-end-column="53" />
           <folding>
-            <element signature="e#0#60#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/category/child/update-form.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-end-line="7" />
+        <state relative-caret-position="342">
+          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -637,8 +564,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/category/child/add-form.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        <state relative-caret-position="247">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -647,28 +574,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/Actions/categoryActioon.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="35" column="66" lean-forward="true" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="66" />
+        <state relative-caret-position="266">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/categoryReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/roleReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/Actions/roleActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/role/role.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="96" column="41" lean-forward="true" selection-start-line="96" selection-start-column="41" selection-end-line="96" selection-end-column="41" />
           <folding>
-            <element signature="e#0#283#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/user/user.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="103" column="54" lean-forward="true" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#46#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/Actions/userActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="33" />
+          <folding>
+            <element signature="e#1#429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/userReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="10" selection-start-line="10" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/ajax.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="29" column="9" lean-forward="true" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/product/child/add-update.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        <state relative-caret-position="120">
+          <caret line="61" column="52" lean-forward="true" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#630#743#0" />
+            <element signature="e#781#887#0" />
+            <element signature="e#2755#3196#0" />
+            <element signature="e#3236#3492#0" />
+            <element signature="e#3514#3810#0" />
+            <element signature="e#3832#4241#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/product/child/card-title.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
+        <state relative-caret-position="19">
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/product/child/product-detail.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="43" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -677,39 +685,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/product/product-home.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="61" column="102" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="102" />
+        <state relative-caret-position="171">
+          <caret line="111" column="85" selection-start-line="111" selection-start-column="85" selection-end-line="111" selection-end-column="85" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/redux/reducers/productReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="58" column="89" lean-forward="true" selection-start-line="58" selection-start-column="89" selection-end-line="58" selection-end-column="89" />
+          <folding>
+            <element signature="e#0#361#0" expanded="true" />
+            <element signature="e#1690#1863#0" />
+            <element signature="e#1873#2289#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/product/child/pictures-wall.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="34" column="84" selection-start-line="34" selection-start-column="84" selection-end-line="34" selection-end-column="84" />
+        <state relative-caret-position="133">
+          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding>
-            <element signature="e#0#67#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/redux/Actions/productAction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="161">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#330#0" expanded="true" />
+            <element signature="e#4154#4484#0" />
+            <element signature="e#4526#4926#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/redux/reducers/productReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="123" column="27" lean-forward="true" selection-start-line="123" selection-start-column="27" selection-end-line="123" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#659#0" expanded="true" />
-            <element signature="n#!!block;n#pictureWall#0" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="431">
+            <caret line="545" column="1" lean-forward="true" selection-start-line="545" selection-start-column="1" selection-end-line="545" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

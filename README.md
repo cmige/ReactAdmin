@@ -465,5 +465,132 @@
  // 显示的时候需要将 props.onload() 的返回值 作为参数传到 children 属性；
  ```
  
+ ### Category:
+ 
+ ```javascript
+ const initCategory = {
+     categoryList:[],
+     childCategoryList:[] // 用于展示二级分类列表和后续的更新和添加（新加）
+     loading:true, // table 的loading ，页面加载时为 true
+     parentId:'0',
+     parentName:'',
+     visible:0, // 1 --> addForm  2 --> updateForm
+     confirmLoading:false, // 用于显示异步提交的加载状态
+ }
+ 
+ componentDidMount: --> getCategoryList(parentId:string，parentName?string) --> state:init parentId = '0'
+ data:[{ parentId, _id, name }]  --> category.categoryList[]
+ ----------------------------
+ // 添加分类
+ 惰性加载 --> 点击发送同步 action showForm(1) --> add(parentId:string,parentName:string) --> 判断 parentId 的值选择添加到 分类列表，并将 visible = 0 --> 清空 addForm 
+ data:[{ parentId, _id, name }] 当前添加的分类项
+ addForm 中的 select 展示需要用到 parentId 和 parentName 
+ ----------------------------
+ // 更新分类
+ 惰性加载 --> 点击发送同步 action showForm(2) --> 得到 updateItem {parentId,_id,name} --> update( categoryId:_id<string>, name:string, parentId?string) -->  parentId用于标识更新那个列表
+ data:[{ parentId,_id,name }] 当前更新完后的分类项
+ ----------------------------
+ // 查看子分类: 
+ props:categoryItem{parentId, _id, name} --> 查看当前分类下的子分类 --> getCategoryList(parentId:_id，parentName:name）--> 直接更新 childCategoryList:[] 并显示
+ ```
+ 
+ 
+ 
+ ### Product
+ 
+ ```javascript
+ const initProduct = {
+     total:'',	// 产品总数
+     list:[],	// 指定页码的产品
+     loading:false,	// 异步获取二级分类名称的加载状态
+     child:{},	// 选中的产品
+     cascaderOptions:[], 	// 添加产品和修改产品的级联选择列表
+     addSuc:false,
+     pageNum:1,	//页码
+     search:{	// 搜索对象
+     	isSearch:false	// 标记是否为搜索列表
+         searchName:''	// 搜索内容
+         searchType:''	// 搜索类型
+ 	}
+ }
+ // 父组件：
+ componentDidMount: --> getProductList(pageNum:num, pageSize:num(constant)) --> data: [{ pageNum, pageSize, total, list[{ status, imgs[], _id, categoryId, pCategoryId, name, price, desc, detail }] }] --> 可直接更新状态
+ ----------------------------
+ // 搜索产品:
+ search
+ search(pageNum:num, searchName:str, searchType:str) --> data: [ pageNum, pageSize, total, list[productObj] ] --> 可直接更新状态, 并且要额外更新 searchObj --> 用于 Table的 分页设置
+ ----------------------------
+ // 更新产品状态：
+ props:productItem{ _id, status, ... } --> updateState( status, productId ) --> data: [productObj(只更改了状态)] --> 在 list 寻找对应的 product 进行更新；
+ ----------------------------
+ // 路由子组件
+ // detail 组件
+ props:productItem{ status, imgs[], _id, categoryId, pCategoryId, name, price, desc, detail }
+ //选中的 product
+ componentDidMount: 直接获取该产品的分类名称 --> getCategoryName(categoryId, pCategoryId) -->
+ data: [pCategory{ name },category{ name }] "如果 pCategoryId='0' --> data: [category{}]" --> 更新 child{}
+ ----------------------------
+ // 添加 && 更新 组件
+ props: productItem{} 
+ componentDidMount: 首先要先获取一级分类列表的分类名称，再根据 productItem 的 pCategoryId === '0' 判断是否获取二级分类名称( 主要是应对在更新产品的时候有可能是二级分类的产品 )
+ // 更新
+ props: productItem{ pCategoryId，... } 
+ Cascader 结构: {label:name,value:_id,isLeaf?:false,loading:false,children?:array}
+ componentDidMount: 首先 获取一级分类列表,若 pCategoryId ！== '0' 需要获取二级分类列表 --> getCascaderName('0'),getCascaderName(pCategoryId?)
+ data: [{ parentId, _id, name }] --> 
+ pCategoryId = '0' --> { label:name, value:_id, isLeaf:false } 
+ pCategoryId != '0' --> data 为空数组 --> { label:name, value:_id, isLeaf:true } --> data 不为空数组 --> 为对应的结构添加 children --> 更新 cascaderOptions[];                                        
+ ```
+ 
+ 
+ 
+ ### Role
+ 
+ ```javascript
+ const initRole = {
+     roleList:[],	// 所有权限角色的列表
+     selectRole:{},	// 选中的角色项
+     visibility:0
+ }
+ componentDidMount --> getRoleList() 
+ data: [{ menus:arraay, _id, name, create_time, auth_time, auth_name }]
+ // 添加角色: 懒加载
+ addRole(roleName:string) --> data:[{  _id, name, create_time }] --> 更新 roleList
+ ----------------------------
+ // onSelect: 更新、修改权限按钮的状态
+ data:[{ menus:arraay, _id, name, create_time, auth_time?, auth_name? }]
+ ----------------------------
+ // 更新角色: 懒加载 -- 更新 menus[] 、 auth_name 、auth_time
+ props:[{ menus:arraay, _id, name, create_time, auth_time? auth_name?}]
+ menus --> 展现树形控件
+ updateRole(roleObj) --> data: [{ menus:arraay, _id, name, create_time, auth_time, auth_name }] --> 更新 roleList 中匹配 _id 的 role
+ ```
+ 
+ 
+ 
+ ### User
+ 
+ ```javascript
+ const initUser = {
+     _id:'',		//login
+     username:"",	// login
+     userList:[],	// 所有用户列表
+     roles:[],		// 所有角色权限列表 --> 用于展现 用户角色名称和添加修改用户时的select组件展现
+     visibility:false
+ }
+ componentDidMount --> getUserList()
+ data: [ users:array, roles:array ]
+ ----------------------------
+ // 添加用户:
+ addUser(userObj) --> data:[{ _id, username, password, email, phone, role_id, create_time}] --> 更新 userList[]
+ ----------------------------
+ // 更新用户:
+ props: userItem{} --> updateUser(userObj) --> data:[userObj] --> 更新 userList[] 中指定的 user
+ ----------------------------
+ // 删除用户:
+ 选中的 userItem{} --> updateUser(userItem._id) --> data: [deleteUserObj] --> 删除  userList[] 中指定的 user
+ ```
+ 
+
 
  

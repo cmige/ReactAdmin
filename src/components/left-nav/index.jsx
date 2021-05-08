@@ -24,7 +24,6 @@ class LeftNav extends Component{
     }
     AuthMenu = (item, user) => {
 
-        const {username, menus } = user
         if(user.username === 'admin') return true
         if(item.isPublic) return true
         if(user.menus.find(menu => menu === item.path)) return true
@@ -32,23 +31,6 @@ class LeftNav extends Component{
             if(item.children.find(child => user.menus.indexOf(child.path) !== -1)) return true
         }
         return false
-        // menus.forEach(menuItem => {
-        //     if (item.children) {
-        //         if (item.children.find(cItem => cItem.path === menuItem))
-        //             // console.log(item.children.find(cItem => cItem.path === menuItem))
-        //             return true
-        //     }
-        //     if (item.path === menuItem){
-        //         console.log(item)
-        //         return true
-        //     }
-        // })
-        // // if(username==='admin' || item.isPublic || menus.indexOf(item.path)!==-1) {
-        // //     return true
-        // // } else if(item.children){ // 4. 如果当前用户有此item的某个子item的权限
-        // //     return !!item.children.find(child =>  menus.indexOf(child.path)!==-1)
-        // // }
-        // return false
     }
     getMenuNode = (menuList,user) => {
         this.path = this.props.location.pathname

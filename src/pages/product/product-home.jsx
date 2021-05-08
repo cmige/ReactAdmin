@@ -1,4 +1,4 @@
-import React, { Component,PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import {
     Card,
     Button,
@@ -24,6 +24,7 @@ class ProductHome extends PureComponent{
         }
     }
     toDetailUpdate = (type,product) => {
+        console.log(product)
         this.props.oneProduct(product)
         if (type === 'detail')
             this.props.history.push({
@@ -98,7 +99,7 @@ class ProductHome extends PureComponent{
                     <Table
                         rowKey='_id'
                         bordered
-                        loading={product.loading}
+                        loading={ product.loading }
                         dataSource={ product.list }
                         columns={ this.state.columns }
                         pagination={{
@@ -107,8 +108,12 @@ class ProductHome extends PureComponent{
                             total:product.total,
                             showQuickJumper:true,
                             onChange: async pageNum => {
-                                this.pageNum = pageNum
-                                message(await this.props.getProductList(pageNum))
+                                if(product.search && product.search.isSearch){
+                                    const { searchName, searchType } = product.search
+                                    message(await this.props.search(pageNum, searchName, searchType))
+                                }else {
+                                    message(await this.props.getProductList(pageNum))
+                                }
                             }
                         }}
                     >

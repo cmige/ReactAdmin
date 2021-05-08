@@ -1,7 +1,6 @@
-import React, { Component, PureComponent, lazy, Suspense } from 'react'
+import React, { PureComponent } from 'react'
 import {
     Card,
-    Button,
     Table
 } from 'antd'
 import { PAGE_SIZE } from '../../utils/contants'
@@ -36,7 +35,7 @@ class Role extends PureComponent{
             {
                 title:"授权时间",
                 dataIndex:"auth_time",
-                render:(auth_time)=>moment(auth_time).format('Y-M-D, h:mm:ss')
+                render:(auth_time)=> auth_time? moment(auth_time).format('Y-M-D, h:mm:ss'):''
             },
             {
                 title:"授权人",
@@ -58,6 +57,7 @@ class Role extends PureComponent{
     }
 
     render() {
+        console.log('role')
         const { role } = this.props
         const title = (
             <div>

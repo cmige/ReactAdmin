@@ -19,11 +19,12 @@ export default class AddForm extends PureComponent{
     formRef = React.createRef()
 
     handleOk = () => {
-        this.props.confirmLoading(true)
+
         const form = this.formRef.current
         form.validateFields(['parentId','name'])
             .then(async date=> {
                 if (!date.parentId) return
+                this.props.confirmLoading(true)
                 const result = await this.props.add(date)
                 message(result)
                 form.resetFields();
@@ -67,10 +68,10 @@ export default class AddForm extends PureComponent{
                             >
                                 {
                                     parentId === '0'? <Option value='0' >一级分类</Option>:
-                                        <Option value={category.parentId} >{parentName}</Option>
+                                        <Option value={ category.parentId } >{ parentName }</Option>
                                 }
                                 {
-                                    categoryList.map(item =><Option key={item._id} value={item._id}>{item.name}</Option>)
+                                    categoryList.map(item =><Option key={ item._id } value={ item._id }>{ item.name }</Option>)
                                 }
                             </Select>
                         </Item>

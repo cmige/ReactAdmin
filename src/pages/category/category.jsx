@@ -1,11 +1,9 @@
-import React, { PureComponent, lazy, Suspense } from 'react'
+import React, { PureComponent, lazy } from 'react'
 import {
     Card,
-    Button,
     Table,
-    Modal
 } from 'antd'
-import { PlusOutlined, ArrowRightOutlined } from '@ant-design/icons'
+import { ArrowRightOutlined } from '@ant-design/icons'
 import LinkButton from '../../components/link-button'
 import { connect } from 'react-redux'
 import { getCategoryList, showForm, update, confirmLoading, add } from '../../redux/Actions/categoryActioon'
@@ -63,7 +61,6 @@ class Category extends PureComponent{
                     {
                         this.props.category.parentId === '0'?
                             <LinkButton onClick={()=>this.handleClick('showCategoryChild',category)}>查看子分类</LinkButton>: null
-
                     }
                 </>
 
@@ -99,7 +96,6 @@ class Category extends PureComponent{
                 content={ '添加'}
                 buttonType='Button'
                 onClick={ Com => {
-
                     this.handleClick('add')
                     this.setState({ addCom:Com })
                 }}
@@ -116,12 +112,7 @@ class Category extends PureComponent{
                         loading={category.loading}
                         pagination={{ defaultPageSize:3,showQuickJumper:true }}
                     />
-                    {/*<AddForm
-                        category={category}
-                        showForm={this.props.showForm}
-                        add={this.props.add}
-                        confirmLoading={this.props.confirmLoading}
-                    />*/}
+
                     {
                         this.state.addCom ?
                             <this.state.addCom

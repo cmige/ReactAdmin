@@ -32,6 +32,7 @@ export default function role(state=initRole,action) {
                 visibility:action.data
             }
         case RECEIVE_ADD_ROLE_SUC:              // receive_add_role_suc
+            console.log(action.data)
             return {
                 ...state,
                 visibility:0,

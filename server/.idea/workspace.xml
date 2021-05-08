@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../src/redux/reducers/roleReducer.js" description="const initRole = {&#10;    roleList:[],&#10;    selectRole..." line="9" />
+    <bookmark url="file://$PROJECT_DIR$/../src/redux/reducers/userReducer.js" description="const initUser = {&#10;    _id:'',&#10;    username:&quot;&quot;,&#10;  ..." line="10" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ca6988d6-b482-4d5d-a209-a96f169a3a70" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/upload/image-1620296285423.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/upload/image-1620297243972.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/upload/image-1620297260980.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/components/message/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/message/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/components/left-nav/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/components/left-nav/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/admin/admin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/admin/admin.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/category/category.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/category.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/category/child/add-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/child/add-form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pages/category/child/update-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/category/child/update-form.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pages/login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/login/login.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/product/child/add-update.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/add-update.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/product/child/card-title.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/card-title.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/product/child/pictures-wall.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/pictures-wall.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/pages/product/child/product-detail.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/child/product-detail.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/product/product-home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/product/product-home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pages/role/add-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/add-role.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/role/role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/role.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pages/role/set-role.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/role/set-role.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/pages/user/user-form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/user/user-form.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/pages/user/user.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../src/pages/user/user.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/redux/Actions/categoryActioon.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/categoryActioon.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/redux/Actions/productAction.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/productAction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/redux/Actions/roleActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/roleActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/redux/Actions/userActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/Actions/userActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/redux/reducers/categoryReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/reducers/categoryReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/redux/reducers/productReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/reducers/productReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src/redux/reducers/roleReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/redux/reducers/roleReducer.js" afterDir="false" />
@@ -41,21 +36,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+            <state relative-caret-position="250">
+              <caret line="129" column="64" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mongoose/userModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="152">
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -73,8 +68,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="width" value="1930" />
+    <option name="x" value="952" />
+    <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -85,7 +80,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -107,6 +101,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -139,24 +134,21 @@
       <option name="presentableId" value="Default" />
       <updated>1620190093012</updated>
       <workItem from="1620190095795" duration="5155000" />
+      <workItem from="1620382425655" duration="1874000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5155000" />
+    <option name="totallyTimeSpent" value="7029000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="npm" side_tool="true" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14209116" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14142092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3286119" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -164,27 +156,31 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Mongo Explorer" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32577905" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/router/index.js">
+    <entry file="file://$PROJECT_DIR$/mongoose/userModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+        <state relative-caret-position="152">
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mongoose/userModel.js">
+    <entry file="file://$PROJECT_DIR$/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="250">
+          <caret line="129" column="64" selection-start-line="129" selection-start-column="64" selection-end-line="129" selection-end-column="64" />
         </state>
       </provider>
     </entry>

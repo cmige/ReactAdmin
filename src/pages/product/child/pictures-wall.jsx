@@ -1,50 +1,55 @@
-import React, { PureComponent, Component, forwardRef } from 'react'
+import React, { Component } from 'react'
 
-import { Upload, Modal, Button } from 'antd';
+import { Upload, Modal } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { connect } from 'react-redux'
 import { uploadPicture, previewImage, deletePicture, initPictureWall } from '../../../redux/Actions/productAction'
 import PropType from 'prop-types'
-import message from '../../../components/message'
 const BASE_URL = '/api'
 
-function getBase64(file) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = () => resolve(reader.result);
-        reader.onerror = error => reject(error);
-    });
-}
+// function getBase64(file) {
+//     return new Promise((resolve, reject) => {
+//         const reader = new FileReader();
+//         reader.readAsDataURL(file);
+//         reader.onload = () => resolve(reader.result);
+//         reader.onerror = error => reject(error);
+//     });
+// }
 
 class PictureWall extends Component {
 
-    // state = {
-    //     percent:0,
-    //     fileList:[]
-    // }
     static propType = {
         getRef:PropType.func,
-        imgs:PropType.array
+        imgs:PropType.array,
+        productId:PropType.string
     }
-
+    deleteArr = []
+    uploadArr = []
     handleCancel = () => this.props.previewImage('cancel')
     handlePreview =  file => this.props.previewImage('preview',file)
 
-    handleChange = async ({ file,fileList }) => {
-        if (file.status === 'removed') message(await this.props.deletePicture(file))
+    Delete = (type,file) => {
+        if (type === 'fake'){
+            this.props.deletePicture(file,type)
+        } else {
+            this.props.deletePicture(file,type)
+        }
 
-        // let files = [{
-        //     percent:fileList[0].percent,
-        //     name:fileList[0].name,
-        //     uid:fileList[0].uid,
-        //     status:fileList[0].status,
-        // }]
-        // this.setState({files})
+    }
+    upload = ({ fmData, config, file, productId, type }) => {
+        this.props.uploadPicture( fmData, config, file, productId || '',type)
+    }
+    handleChange = ({ file,fileList }) => {
+        if (file.status === 'removed'){
+            this.deleteArr.push(file)
+            this.Delete('fake',file)
+        } 
+
     }
     
     onCustomRequest = async (option) => {
         const { onSuccess, onError, file, onProgress, action } = option;
+
         const fmData = new FormData();
         const config = {
             headers: { "content-type": "multipart/form-data" },
@@ -60,7 +65,11 @@ class PictureWall extends Component {
         };
         fmData.append("image", file);
         try {
-            message(await this.props.uploadPicture(fmData,config,file))
+            // this.uploadArr.push({ fmData:fmData, file:file, productId: this.props.productId || '', config:config })
+            this.upload({ fmData, config, file, productId:this.props.productId || ''})
+
+            // this.props.productId 如果有 证明是修改/详情页面，没有则是添加产品
+            // message(await this.props.uploadPicture( fmData, config, file, this.props.productId || ''))
             // onSuccess('ok')
             // const res = await axios.post(
             //     "https://jsonplaceholder.typicode.com/posts",
@@ -70,7 +79,7 @@ class PictureWall extends Component {
             onSuccess('ok')
         } catch (err) {
             console.log("Eroor: ", err);
-            const error = new Error("Some error");
+            // const error = new Error("Some error");
             onError({ err });
         }
 
@@ -82,7 +91,7 @@ class PictureWall extends Component {
     }
     componentDidMount() {
         this.props.getRef(this)
-        this.props.initPictureWall(this.props.imgs)
+        this.props.initPictureWall(this.props.imgs, this.props.productId)
     }
 
     render() {

@@ -8,7 +8,6 @@ import {
 
 const initCategory = {
     categoryList:[],
-    msg:' ',
     loading:true,
     parentId:'0',
     parentName:'',

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {
-    Card,
+    Card
 } from 'antd'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 import LinkButton from '../../../components/link-button'
@@ -25,7 +25,7 @@ class ProductDetail extends Component{
     }
 
     render() {
-        console.log('product detail')
+        console.log('product detail',this.props.child)
         const product = this.props.child
         const { name, desc, price, imgs, category, pCategory, detail } = product
         return(
@@ -55,7 +55,7 @@ class ProductDetail extends Component{
                 </Card>
                 <Card type="inner" className="inner-card">
                     <span className="detail-left">商品详情：</span>
-                    <span dangerouslySetInnerHTML={{__html:product.detail}}></span>
+                    <span dangerouslySetInnerHTML={{__html: detail}}></span>
                     {/*<span>{detail}</span>*/}
                 </Card>
             </Card>

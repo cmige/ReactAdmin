@@ -1,7 +1,6 @@
-import React, { Component, lazy,Suspense } from 'react'
+import React, { Component, lazy } from 'react'
 import {
     Card,
-    Button,
     Table,
     Modal
 } from 'antd'
@@ -74,10 +73,6 @@ class User extends Component{
             this.setState({Com})
             this.props.showForm(true)
         }
-        if(type === 'addUser'){
-            this.userItem = null
-            this.props.showForm(true)
-        }
         if(type === 'delete'){
             confirm({
                 title: `确认删除${userItem.username}吗?`,
@@ -111,6 +106,7 @@ class User extends Component{
                     buttonType='Button'
                     onClick={ Com => {
                         this.props.showForm(true)
+                        this.userItem = null
                         this.setState({ Com })
                     }}
                 >

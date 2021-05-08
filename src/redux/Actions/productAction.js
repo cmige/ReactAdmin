@@ -23,7 +23,6 @@ import {
     reqaddOrUpdate
 } from '../../api'
 import { PAGE_SIZE } from '../../utils/contants'
-import axios from "axios";
 
 const getProductListSuc = (products) => ({ type:RECEIVE_GET_PRODUCT_LIST_SUC, data:products })
 export const loading = (selectedOptions) => ({ type:LOADING,data:selectedOptions })
@@ -37,7 +36,7 @@ export const previewImage = (type,imgFile) => ({ type:RECEIVE_PREVIEW_IMAGE,data
 const deleteSuc = (file) => ({ type:RECEIVE_DELETE_IMAGE_SUC,data:file })
 
 const addOrUpdateSuc = (product) => ({ type:RECEIVE_ADD_PRODUCT_SUC, data:product })
-export const initPictureWall = (imgs) => ({ type:'initPictureWall',data:imgs })
+export const initPictureWall = (imgs,productId) => ({ type:'initPictureWall',data:{ imgs,productId } })
 
 export const getProductList = ( pageNum ) => {
     return async dispatch => {
@@ -57,7 +56,7 @@ export const search = ( pageNum, searchName, searchType ) => {
         dispatch(loading())
         const result = await reqProductSearch( { pageNum, pageSize:PAGE_SIZE, searchName, searchType } )
         if (result.status === 0) {
-            dispatch(searchSuc(result.data))
+            dispatch(searchSuc({ search: result.data, searchName, searchType, isSearch: true }))
             return Promise.resolve({ status:0,content:`搜索产品成功` })
         }else {
             return Promise.resolve({ status:1,content:result.msg })
@@ -99,27 +98,35 @@ export const getCascaderName = (parentId,selectedOptions) => {
     }
 }
 
-export const uploadPicture = (pictureFile,config,{ uid }) => {
+export const uploadPicture = (pictureFile,config,file,productId, type) => {
     return async dispatch => {
         const result = await reqUploadPicture(pictureFile,config)
         if (result.status === 0) {
-            dispatch(uploadSuc({ pictureObj:result. data,uid }))
+            dispatch(uploadSuc({ pictureObj:result.data, uid:file.uid , productId }))
             return Promise.resolve({ status:0,content:`上传图片成功` })
         }else {
             return Promise.resolve({ status:1,content:result.msg })
         }
+
     }
 }
 
-export const deletePicture = (file) => {
+export const deletePicture = (file,type) => {
     return async dispatch => {
-        const result = await reqDeletePicture(file.name)
-        if (result.status === 0) {
+        if (type === 'real') {
+            const result = await reqDeletePicture(file.name)
+            console.log('real deletePicture action')
+            if (result.status === 0) {
+                dispatch(deleteSuc(file))
+                return Promise.resolve({ status:0,content:`删除图片成功` })
+            }else {
+                return Promise.resolve({ status:1,content:result.msg })
+            }
+        }else if (type === 'fake') {
+            console.log('fake deletePicture action')
             dispatch(deleteSuc(file))
-            return Promise.resolve({ status:0,content:`删除图片成功` })
-        }else {
-            return Promise.resolve({ status:1,content:result.msg })
         }
+
     }
 }
 
@@ -135,3 +142,4 @@ export const addOrUpdate = (product) => {
         }
     }
 }
+

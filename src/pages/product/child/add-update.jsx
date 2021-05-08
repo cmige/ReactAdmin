@@ -1,4 +1,4 @@
-import React, { Component,PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 
 import {
     Card,
@@ -47,6 +47,7 @@ class AddUpdate extends PureComponent{
     }
 
     loadData = selectedOptions => {
+        console.log(selectedOptions, 'loadData')
         let targetOption = selectedOptions[0];
         this.props.loading(targetOption)
         this.props.getCascaderName(targetOption.value,targetOption)
@@ -55,6 +56,27 @@ class AddUpdate extends PureComponent{
 
     editorRef = React.createRef()
     onFinish = async (value) => {
+        const deleteImgArr = this.ref.deleteArr
+        const uploadImgArr = this.ref.uploadArr
+        // console.log(deleteImgArr,'deleteImgArr')
+        // console.log('uploadImgArr', uploadImgArr)
+        // if ( uploadImgArr.length === 1 ){
+        //     await this.ref.upload({ ...uploadImgArr[0], type:'real' })
+        // }else {
+        //     uploadImgArr.forEach(async file => {
+        //         await this.ref.upload({ ...file, type:'real'})
+        //     })
+        // }
+        if ( deleteImgArr.length === 1 ){
+            // console.log(this.ref.props.deletePicture())
+            await this.ref.Delete('real',deleteImgArr[0],)
+            // console.log( this.ref.Delete(deleteImgArr[0],'real'))
+        }else {
+            deleteImgArr.forEach(async file => {
+                await this.ref.Delete('real',file)
+            })
+        }
+
         const detail = this.editorRef.current.getDetail()
         const imgs =  this.ref.getImgs()
         const { name, desc, price, categorys } = value
@@ -146,7 +168,7 @@ class AddUpdate extends PureComponent{
                         label="商品图片"
                         name="imgs"
                     >
-                        <PictureWall getRef={ref=> this.ref = ref} imgs={child? child.imgs: []}/>
+                        <PictureWall getRef={ref=> this.ref = ref} imgs={child? child.imgs: []} productId={child?child._id:''}/>
 
                     </Item>
                     <Item
