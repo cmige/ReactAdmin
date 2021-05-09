@@ -1,32 +1,74 @@
 
+//.home{
+//  min-height: 850px;
+//  padding: 20px;
+//  display: flex;
+//  flex-direction: column;
+//  .home-top{
+//    margin-bottom: 20px;
+//    display: flex;
+//    .home-top-left{
+//      min-width: 250px;
+//      width: 30%;
+//      height: 300px;
+//      font-size: 20px;
+//      p{
+//        font-weight: bold;
+//      }
+//    }
+//    .home-top-right{
+//      width: 70%;
+//      height: 300px;
+//    }
+//  }
+//  .home-bottom{
+//    padding: 20px;
+//
+//  }
+//
+//}
+//.ant-statistic-title{
+//  font-weight: bold;
+//  color: rgba(0, 0, 0, .8);;
+//}
+
 .home{
+  padding: 20px;
   min-height: 850px;
-  display: flex;
-  flex-direction: column;
+
   .home-top{
+    height: 300px;
+    margin-bottom: 20px;
     display: flex;
+    flex-direction: row;
+    justify-content:space-between;
     .home-top-left{
-      min-width: 250px;
-      width: 30%;
-      height: 300px;
-      padding: 30px 20px 60px 40px;
-      font-size: 20px;
-      p{
-        font-weight: bold;
-      }
+      min-width: 300px;
+      margin-right: 20px;
     }
     .home-top-right{
-      width: 70%;
-      height: 350px;
-      padding: 30px 20px 60px 40px;
+      min-width: 800px;
+    }
+
+
+
+
+  }
+
+  .home-bottom {
+    .ant-card-body {
+      display: flex;
+      .home-bottom-left{
+        margin-right: 80px;
+        min-width: 600px;
+        min-height: 300px;
+      }
+
+      .home-bottom-right{
+        min-width: 400px;
+        height: 500px;
+      }
     }
   }
-  .home-bottom{
-
-  }
-
 }
-.ant-statistic-title{
-  font-weight: bold;
-  color: rgba(0, 0, 0, .8);;
-}
+

@@ -11,14 +11,13 @@ import { getProductList, search, oneProduct, updateState } from '../../redux/Act
 import { PAGE_SIZE } from '../../utils/contants'
 import message from '../../components/message'
 import './product.less'
-import {PlusOutlined} from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
 
 class ProductHome extends PureComponent{
     constructor(){
         super()
         this.state = {
             columns: this.initColumns(),
-            searchCom:null,
             detailCom:null,
             addProductCom:null
         }
@@ -82,7 +81,7 @@ class ProductHome extends PureComponent{
         ]
     }
     async componentDidMount() {
-        message(await this.props.getProductList(1))
+        message(await this.props.getProductList(this.props.product.pageNum))
     }
 
     render() {
